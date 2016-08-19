@@ -171,13 +171,13 @@ b.toFixed(4);			// "3.1416"
 
 The "how" behind being able to call `a.toUpperCase()` is more complicated than just that method existing on the value.
 
-Briefly, there is a `String` (capital `S`) object wrapper form, typically called a "native," that pairs with the primitive `string` type; it's this object wrapper that defines the `toUpperCase()` method on its prototype.
+Briefly, there is a `String` (capital `S`) object wrapper form, typically called a "native", that pairs with the primitive `string` type; it's this object wrapper that defines the `toUpperCase()` method on its prototype.
 
 When you use a primitive value like `"hello world"` as an `object` by referencing a property or method (e.g., `a.toUpperCase()` in the previous snippet), JS automatically "boxes" the value to its object wrapper counterpart (hidden under the covers).
 
 A `string` value can be wrapped by a `String` object, a `number` can be wrapped by a `Number` object, and a `boolean` can be wrapped by a `Boolean` object. For the most part, you don't need to worry about or directly use these object wrapper forms of the values -- prefer the primitive value forms in practically all cases and JavaScript will take care of the rest for you.
 
-**Note:** For more information on JS natives and "boxing," see Chapter 3 of the *Types & Grammar* title of this series. To better understand the prototype of an object, see Chapter 5 of the *this & Object Prototypes* title of this series.
+**Note:** For more information on JS natives and "boxing", see Chapter 3 of the *Types & Grammar* title of this series. To better understand the prototype of an object, see Chapter 5 of the *this & Object Prototypes* title of this series.
 
 ### Comparing Values
 
@@ -333,7 +333,7 @@ In JavaScript, variable names (including function names) must be valid *identifi
 
 An identifier must start with `a`-`z`, `A`-`Z`, `$`, or `_`. It can then contain any of those characters plus the numerals `0`-`9`.
 
-Generally, the same rules apply to a property name as to a variable identifier. However, certain words cannot be used as variables, but are OK as property names. These words are called "reserved words," and include the JS keywords (`for`, `in`, `if`, etc.) as well as `null`, `true`, and `false`.
+Generally, the same rules apply to a property name as to a variable identifier. However, certain words cannot be used as variables, but are OK as property names. These words are called "reserved words", and include the JS keywords (`for`, `in`, `if`, etc.) as well as `null`, `true`, and `false`.
 
 **Note:** For more information about reserved words, see Appendix A of the *Types & Grammar* title of this series.
 
@@ -495,7 +495,7 @@ switch (a) {
 
 Here, if `a` is either `2` or `10`, it will execute the "some cool stuff" code statements.
 
-Another form of conditional in JavaScript is the "conditional operator," often called the "ternary operator." It's like a more concise form of a single `if..else` statement, such as:
+Another form of conditional in JavaScript is the "conditional operator", often called the "ternary operator." It's like a more concise form of a single `if..else` statement, such as:
 
 ```js
 var a = 42;
@@ -767,7 +767,7 @@ From here, go read the *Scope & Closures* title of this series for a much more i
 
 Another very commonly misunderstood concept in JavaScript is the `this` identifier. Again, there's a couple of chapters on it in the *this & Object Prototypes* title of this series, so here we'll just briefly introduce the concept.
 
-While it may often seem that `this` is related to "object-oriented patterns," in JS `this` is a different mechanism.
+While it may often seem that `this` is related to "object-oriented patterns", in JS `this` is a different mechanism.
 
 If a function has a `this` reference inside it, that `this` reference usually points to an `object`. But which `object` it points to depends on how the function was called.
 
@@ -842,7 +842,7 @@ The `a` property doesn't actually exist on the `bar` object, but because `bar` i
 
 This linkage may seem like a strange feature of the language. The most common way this feature is used -- and I would argue, abused -- is to try to emulate/fake a "class" mechanism with "inheritance."
 
-But a more natural way of applying prototypes is a pattern called "behavior delegation," where you intentionally design your linked objects to be able to *delegate* from one to the other for parts of the needed behavior.
+But a more natural way of applying prototypes is a pattern called "behavior delegation", where you intentionally design your linked objects to be able to *delegate* from one to the other for parts of the needed behavior.
 
 **Note:** For more information about prototypes and behavior delegation, see Chapters 4-6 of the *this & Object Prototypes* title of this series.
 
@@ -884,7 +884,7 @@ Or better yet, use an already vetted set of polyfills that you can trust, such a
 
 There's no way to polyfill new syntax that has been added to the language. The new syntax would throw an error in the old JS engine as unrecognized/invalid.
 
-So the better option is to use a tool that converts your newer code into older code equivalents. This process is commonly called "transpiling," a term for transforming + compiling.
+So the better option is to use a tool that converts your newer code into older code equivalents. This process is commonly called "transpiling", a term for transforming + compiling.
 
 Essentially, your source code is authored in the new syntax form, but what you deploy to the browser is the transpiled code in old syntax form. You typically insert the transpiler into your build process, similar to your code linter or your minifier.
 
